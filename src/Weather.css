@@ -2,8 +2,9 @@
   font-family: arial, sans-serif;
   border: 1px solid #dadde1;
   padding: 16px;
-  border-radius: 4px;
-  color: rgb(135, 135, 135);
+  border-radius: 30px;
+  color: rgba(6, 101, 2, 0.576);
+  background-color: rgb(239, 239, 239);
 }
 
 .Weather h1 {
@@ -22,13 +23,20 @@
 .Weather li {
   font-size: 16px;
   font-weight: 100;
-  line-height: 19px;
+  line-height: 30px;
   list-style: none;
 }
 
 .Weather canvas {
   margin-top: 10px;
   margin-right: 10px;
+}
+.Weather .form-control {
+  border-radius: 20px;
+}
+.Weather .btn {
+  background-color: rgba(12, 95, 2, 0.99);
+  border-radius: 20px;
 }
 
 .Weather .temperature {
@@ -46,10 +54,13 @@
 }
 
 .Weather .unit {
-  color: rgb(33, 33, 33);
+  color: rgba(6, 101, 2, 0.576);
   font-size: 16px;
   font-weight: 400;
   position: relative;
   line-height: 1;
   top: -34px;
+}
+.Weather .unit a {
+  color: rgb(135, 149, 52);
 }

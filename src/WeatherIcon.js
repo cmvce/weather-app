@@ -1,32 +1,33 @@
 import React from "react";
-import ReactAnimatedWeather from "react-animated-weather";
+/* import ReactAnimatedWeather from "react-animated-weather"; */
 export default function WeatherIcon(props) {
   const codeMapping = {
-    "clear-sky-day": "Clear sky",
-    "clear-sky-night": "Clear sky",
-    "few-clouds-day": "Few Clouds",
-    "few-clouds-night": "Few Clouds",
-    "scattered-clouds-day": "Scattered clouds",
-    "scattered-clouds-night": "Scattered cloudsT",
-    "broken-clouds-day": "Broken clouds",
-    "broken-clouds-night": "Broken clouds",
-    "shower-rain-day": "Shower rain",
-    "shower-rain-night": "Shower rain",
-    "rain-day": "RAIN",
-    "rain-night": "RAIN",
-    "thunderstorm-day": "Thunderstorm",
-    "thunderstorm-night": "Thunderstorm",
-    "snow-day": "Snow",
-    "snow-night": "Snow",
-    "mist-day": "Mist",
-    "mist-night": "Mist",
+    "clear-sky-day": "clear-sky-day",
+    "clear-sky-night": "clear-sky-night",
+    "few-clouds-day": "few-clouds-day",
+    "few-clouds-night": "few-clouds-night",
+    "scattered-clouds-day": "scattered-clouds-day",
+    "scattered-clouds-night": "scattered-clouds-night",
+    "broken-clouds-day": "broken-clouds-day",
+    "broken-clouds-night": "broken-clouds-night",
+    "shower-rain-day": "shower-rain-day",
+    "shower-rain-night": "shower-rain-night",
+    "rain-day": "rain-day",
+    "rain-night": "rain-night",
+    "thunderstorm-day": "thunderstorm-day",
+    "thunderstorm-night": "thunderstorm-night",
+    "snow-day": "snow-day",
+    "snow-night": "snow-night",
+    "mist-day": "mist-day",
+    "mist-night": "mist-night",
   };
+
   return (
-    <ReactAnimatedWeather
-      icon={codeMapping[props.code]}
-      color='#1e1e1e'
-      size={props.size}
-      animate={true}
+    <img
+      src={`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+        codeMapping[props.code]
+      }.png`}
+      alt={props.code}
     />
   );
 }
