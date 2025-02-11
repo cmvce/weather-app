@@ -3,6 +3,7 @@ import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
 import Forecast from "./Forecast.js";
+import { TailSpin } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -63,6 +64,18 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <div className='loader' style={{ padding: "80px" }}>
+        <div style={{ minHeight: "100px", minWidth: "100px" }}>
+          <TailSpin
+            visible={true}
+            color='#4fa94d'
+            ariaLabel='tail-spin-loading'
+            radius='1'
+            wrapperStyle={{ justifyContent: "center" }}
+          />
+        </div>
+      </div>
+    );
   }
 }

@@ -1,5 +1,6 @@
 .Forecast {
   text-align: center;
+  margin-top: 20px;
 }
 .Forecast .forecast-min-temp {
   opacity: 0.6;
